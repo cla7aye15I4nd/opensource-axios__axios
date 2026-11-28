@@ -20,7 +20,7 @@ axios 可能会抛出多种不同类型的错误，有些来自 axios 本身，�
 | ECONNABORTED              | `http` 和 `xhr` 适配器默认在请求超时时返回此错误码。浏览器中止请求时，`xhr` 适配器也可能返回此错误码。   |
 | ETIMEDOUT                 | 对于 Axios 自身的超时错误，无论 `transitional.clarifyTimeoutError` 如何设置，`fetch` 适配器都会返回此错误码。`http` 和 `xhr` 适配器在该选项为 `true` 时返回此错误码。 |
 | ECONNREFUSED              | 服务器拒绝了连接。由 Node.js 的 `http` 适配器设置，原始系统错误可通过 `error.cause` 获取；`xhr` 和 `fetch` 适配器则会报告 `ERR_NETWORK`。 |
-| ERR_NETWORK               | 网络相关问题。在浏览器中，此错误也可能由 [CORS](https://developer.mozilla.org/ru/docs/Web/HTTP/Guides/CORS) 或[混合内容](https://developer.mozilla.org/en-US/docs/Web/Security/Mixed_content)策略违规引起。出于安全考虑，浏览器不允许 JS 代码获知错误的真实原因，请检查控制台。 |
+| ERR_NETWORK               | 网络相关问题。在浏览器中，此错误也可能由 [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS) 或[混合内容](https://developer.mozilla.org/en-US/docs/Web/Security/Mixed_content)策略违规引起。出于安全考虑，浏览器不允许 JS 代码获知错误的真实原因，请检查控制台。 |
 | ERR_FR_TOO_MANY_REDIRECTS | 请求重定向次数过多，超过了 axios 配置中指定的最大重定向次数。                           |
 | ERR_DEPRECATED            | 使用了 axios 中已废弃的功能或方法。                                                     |
 | ERR_BAD_RESPONSE          | 响应无法正确解析或格式异常，通常与 `5xx` 状态码的响应有关。                             |
